@@ -6,32 +6,31 @@ using namespace std;
 int main(void)
 {
     ios::sync_with_stdio(0), cin.tie(0);
-    unordered_set<string> strset;
-    int n, m, count;
-    string word;
-    
+    unordered_set<int> a;
+    unordered_set<int> b;
+    int n, m;
+    int num, count=0;
+
     cin >> n >> m;
 
     for (int i = 0; i < n; i++)
     {
-        cin >> word;
-
-        strset.emplace(word);
+        cin >> num;
+        a.emplace(num);
     }
     
-    count = 0;
-
     for (int i = 0; i < m; i++)
     {
-        cin >> word;
+        cin >> num;
 
-        if (strset.find(word) != strset.end())
+        if (a.find(num) != a.end())
         {
             count++;
         }
+        
     }
     
-    cout << count;
+    cout << n+m-2*count;
 
     return 0;
 }
