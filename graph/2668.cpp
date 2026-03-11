@@ -13,7 +13,7 @@ using namespace std;
 */
 int ccount = 0;
 void numsearch(int v, int d);
-int check[101] = {0}, graph[2][101] = {0};
+int check[101] = {0}, graph[3][101] = {0};
 vector<int> vec;
 int main()
 {   
@@ -60,7 +60,6 @@ int main()
 
 void numsearch(int v, int d)
 {
-    cout << v << ' ' << d << " start" << '\n';
     bool numbool = binary_search(vec.begin(),vec.end(), v);
     if (numbool==0&&(check[v]==0))
     {
