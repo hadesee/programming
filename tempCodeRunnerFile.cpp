@@ -1,27 +1,24 @@
 #include <iostream>
 
+
 using namespace std;
 int main(void)
 {
-    int n, a, b;
+    int n, a;
+    string word;
 
     cin >> n;
 
     for (int i = 0; i < n; i++)
     {
-        cin >> a >> b;
+        cin >> word >> a;
 
-        if (a>=b)
+        if (a==2026)
         {
-            cout << "MMM BRAINS" << endl;
+            cout << word;
         }
-        else 
-        {
-            cout << "NO BRAINS" << endl;
-        }
+        
     }
-    
-
 
     return 0;
 }
