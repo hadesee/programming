@@ -9,12 +9,13 @@ void dfs(int v, int []);
 
 int main(void)
 {
+    ios::sync_with_stdio(0), cin.tie(0);
     int a, b;
-
     cin >> t;
 
     for (int i = 0; i < t; i++)
     {
+        impossible=0;
         cin >> n >> m;
         int check[n+1]={0};
 
@@ -29,6 +30,7 @@ int main(void)
         {
             if (check[j]==0)
             {
+                check[j]=1;
                 dfs(j,check);
             }
             
@@ -43,10 +45,15 @@ int main(void)
             cout << "possible" << '\n';
         }
         
+        for (int i = 1; i <= n; i++)
+        {
+            graph[i].clear();
+        }
+        
         
     }
     
-    return;
+    return 0;
 }
 
 void dfs(int v, int check[])
