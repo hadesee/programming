@@ -26,7 +26,7 @@ int main(void)
     {
         cin >> a >> b;
 
-        score[a] = b;
+        score[a] += b;
     }
 
     dfs(1, 0);    
